@@ -67,7 +67,7 @@ const fs = require('fs');
                     for (let index = 0; index < list-1; index++) {
                         const activitie = {
                          name: document.querySelector(`[data-oba-carousel=ship_related_onboard] [data-slick-index="${index}"] .oba-car-item-desc-title`).innerText,
-                         image:  document.querySelector(`[data-oba-carousel=ship_related_onboard] [data-slick-index="${index}"] .oba-car-item-img`).style.backgroundImage.slice(4, -1).replace(/["']/g, "https://www.carnival.com"),
+                         image: 'https://www.carnival.com' + document.querySelector(`[data-oba-carousel=ship_related_onboard] [data-slick-index="${index}"] .oba-car-item-img`).style.backgroundImage.slice(4, -1).replace(/["']/g, ""),
                          additional:( document.querySelector(`[data-oba-carousel=ship_related_onboard] [data-slick-index="${index}"] .oba-car-item-desc-incl`).innerText == 'Additional') ? true : false
                         }
                         activities = [...activities, activitie]
@@ -85,7 +85,7 @@ const fs = require('fs');
                     for (let index = 0; index < list-1; index++) {
                         const activitie = {
                          name: document.querySelector(`[data-oba-carousel=ship_related_dining] [data-slick-index="${index}"] .oba-car-item-desc-title`).innerText,
-                         image:  document.querySelector(`[data-oba-carousel=ship_related_dining] [data-slick-index="${index}"] .oba-car-item-img`).style.backgroundImage.slice(4, -1).replace(/["']/g, "https://www.carnival.com"),
+                         image: 'https://www.carnival.com'+ document.querySelector(`[data-oba-carousel=ship_related_dining] [data-slick-index="${index}"] .oba-car-item-img`).style.backgroundImage.slice(4, -1).replace(/["']/g, ""),
                          additional:( document.querySelector(`[data-oba-carousel=ship_related_dining] [data-slick-index="${index}"] .oba-car-item-desc-incl`).innerText == 'Additional') ? true : false
                         }
                         activities = [...activities, activitie]
@@ -118,6 +118,6 @@ const fs = require('fs');
             });  
         }
     }
-    fs.writeFileSync('./files/ships', JSON.stringify(listShips));
+    fs.writeFileSync('./files/ships.json', JSON.stringify(listShips));
     await browser.close();
 })();
