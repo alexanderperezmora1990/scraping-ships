@@ -9,7 +9,7 @@ Consists of extracting (via scraping) all data of Cruise Ships from Carnival's w
 
 ## Installation
 
-install npm and run this commands:
+install npm and run this commands in the project:
 
 ```bash
 npm i
@@ -17,7 +17,7 @@ npm i
 
 ## Usage
 
-run this commands:
+run this commands in the project:
 
 ```bash
 node index.js
