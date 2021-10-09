@@ -1,34 +1,26 @@
-# Foobar
+# scrapping-ships
 
-Foobar is a Python library for dealing with word pluralization.
+Consists of extracting (via scraping) all data of Cruise Ships from Carnival's website
+(https://www.carnival.com/cruise-ships.aspx).
+  • Script should be written in Javascript and must run using NodeJS.
+  • Libraries such as Cheerio and Puppeteer or any other preferred option can be used.
+  • Performance of the script will be taken into consideration.
+  • Data extracted must be store in a JSON file.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+install npm and run this commands:
 
 ```bash
-pip install foobar
+npm i
 ```
 
 ## Usage
 
-```python
-import foobar
+run this commands:
 
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+```bash
+node index.js
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+the result of the scraping will be in th folder files (give write permissions to this folder) for see the result.
